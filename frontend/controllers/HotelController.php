@@ -92,6 +92,7 @@ class HotelController extends Controller
 
             return $this->redirect(['index']);
         }
+        //@todo: set flash message if error save
 
         return $model;
     }
@@ -111,6 +112,9 @@ class HotelController extends Controller
         return $model;
     }
 
+    /**
+     * @param string $name
+     */
     private function setFlashOrder($name)
     {
         Yii::$app->session->setFlash(
