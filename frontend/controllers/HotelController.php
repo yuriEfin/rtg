@@ -28,7 +28,7 @@ class HotelController extends Controller
      */
     public function actionIndex()
     {
-        // @todo: change to ActiveDataProvider )
+        // @todo: change to ActiveDataProvider
         $listHotel = Hotel::find()->all();
 
         return $this->render(

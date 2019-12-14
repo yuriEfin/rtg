@@ -5,6 +5,7 @@ use yii\helpers\Html;
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+AppAsset::register($this);
 dmstr\web\AdminLteAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -21,7 +22,9 @@ dmstr\web\AdminLteAsset::register($this);
 
 <?php $this->beginBody() ?>
 
-    <?= $content ?>
+    <div class="container">
+        <?= $content ?>
+    </div>
 
 <?php $this->endBody() ?>
 </body>

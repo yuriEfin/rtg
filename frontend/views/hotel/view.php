@@ -1,3 +1,13 @@
+<?php
+$this->params['breadcrumbs'][] = [
+    'template' => "<li><b>{link}</b></li>\n",
+    'label' => Yii::t('app', 'Hotels'),
+    'url' => ['/hotel']
+];
+$this->params['breadcrumbs'][] = [
+    'label' => $model->title,
+];
+?>
 <div class="row">
     <div class="col-lg-12"></div>
 </div>

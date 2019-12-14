@@ -3,6 +3,7 @@
 
 /* @var $listHotel \frontend\models\hotel\Hotel[] */
 $this->title = 'Список номеров';
+
 ?>
 <div class="site-index">
 

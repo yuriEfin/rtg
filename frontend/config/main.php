@@ -11,7 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
-    'defaultRoute' => 'hotel-room/order',
+    'defaultRoute' => '/hotel',
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
