@@ -12,6 +12,7 @@ return [
     'homeUrl' => '/',
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
+    'defaultRoute' => '/order',
     'modules' => [],
     'components' => [
         'request' => [

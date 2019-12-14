@@ -7,6 +7,7 @@ use Yii;
 use backend\helpers\HelperHotel;
 use backend\models\hotel\HotelRoom;
 use backend\models\hotel\search\HotelRoomSearch;
+use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -22,6 +23,12 @@ class HotelRoomController extends Controller
     public function behaviors()
     {
         return [
+            'access' => [
+                'class' => AccessControl::class,
+                'rules' => [
+                    ['actions' => ['index', 'create', 'update', 'delete'], 'allow' => true, 'roles' => ['@']],
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::class,
                 'actions' => [
