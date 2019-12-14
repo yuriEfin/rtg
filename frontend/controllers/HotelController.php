@@ -34,7 +34,6 @@ class HotelController extends Controller
         return $this->render(
             'index',
             [
-                'form' => new OrderForm(),
                 'listHotel' => $listHotel,
             ]
         );

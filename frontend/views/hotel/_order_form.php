@@ -39,23 +39,25 @@ use yii\widgets\MaskedInput;
                 'mask' => '99999999999',
             ]
         ) ?>
-        <label>Выберита даты брони</label>
-        <?= DateRangePicker::widget(
-            [
-                'model' => $formModel,
-                'attribute' => 'datetimeRange',
-                'convertFormat' => true,
-                'startAttribute' => 'bookedDateFrom',
-                'endAttribute' => 'bookedDateTo',
-                'pluginOptions' => [
-                    'timePicker' => false,
-                    'locale' => [
-                        'format' => 'Y-m-d',
+        <div class="form-group field-orderform-datetimeRange">
+            <label>Выберита даты брони</label>
+            <?= DateRangePicker::widget(
+                [
+                    'model' => $formModel,
+                    'attribute' => 'datetimeRange',
+                    'convertFormat' => true,
+                    'startAttribute' => 'bookedDateFrom',
+                    'endAttribute' => 'bookedDateTo',
+                    'pluginOptions' => [
+                        'timePicker' => false,
+                        'locale' => [
+                            'format' => 'Y-m-d',
+                        ],
+                        'minDate' => date('Y-m-d'),
                     ],
-                    'minDate' => date('Y-m-d'),
-                ],
-            ]
-        ); ?>
+                ]
+            ); ?>
+        </div>
 
         <?= $form->field($formModel, 'hotelId')->hiddenInput(['value' => $formModel->hotelId])->label(false) ?>
         <div class="form-group">
